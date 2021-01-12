@@ -1,3 +1,4 @@
+#Print sum and product of 2 integers
 a = int(input("Enter number:"))
 b = int(input("Enter number:"))
 
