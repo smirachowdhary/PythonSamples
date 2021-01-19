@@ -1,5 +1,5 @@
 days = "Monday Tuesday Wednesday Friday Saturday Sunday"
-months = "Jan\nFeb\nMar\nApr\nMay\nJun\nJul\nAug\nSep\nOct\nNov\nDec"
+months = "January\nFebuary\nMarch\nApril\nMay\nJune\nJuly\nAugust\nSeptember\nOctober\nNovember\nDecember"
 
 print("Here are the days:", days)
 print("Here are the months:", months)
