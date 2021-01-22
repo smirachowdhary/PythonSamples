@@ -1,6 +1,6 @@
 from sys import argv
 
-script, filename = argv, 
+script, filename = argv, argv
 
 print(f"We're going to erase {filename}.")
 print("If you don't want that, hit Crtl + C(^C)")
