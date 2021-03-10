@@ -14,7 +14,7 @@ elif TypeOfArthematic == "d":
             print("You cannot divide a number by 0.")
         else:
             print(f"The answer to your math problem is {n1//n2}.")
-            print (f"The complete d is {n1/n2}.")
+            print (f"The complete division is {n1/n2}.")
             if n1 % n2 > 0:
                 print(f"The remainder is {n1%n2}.")
 elif TypeOfArthematic == "p":
