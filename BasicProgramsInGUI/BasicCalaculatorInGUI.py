@@ -48,6 +48,9 @@ resultFrame = tk.Frame()
 resultTitleLbl = tk.Label(text = "Result", master = resultFrame)
 resultTitleLbl.pack()
 
+resultLbl = tk.Label(master = resultFrame)
+resultLbl.pack()
+
 resultFrame.pack()
 
 window.mainloop()
