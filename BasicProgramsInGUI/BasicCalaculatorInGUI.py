@@ -1,6 +1,38 @@
 from tkinter import *
 import tkinter as tk
 
+def multiplacation_Handler(event):
+    n1 = int(numTxt1.get())
+    n2 = int(numTxt2.get())
+    tmp = resultLbl["text"]
+    resultLbl["text"] += f"{n1} * {n2} = {n1 * n2}\n"
+
+def division_Handler(event):
+    n1 = int(numTxt1.get())
+    n2 = int(numTxt2.get())
+    tmp = resultLbl["text"]
+    if n2 == 0:
+        resultLbl["text"] += "You cannot divide a number by 0."
+    else:
+        resultLbl["text"] += f"""
+        {n1} / {n2} = {n1 / n2:.3f}
+        Quotent = {n1 // n2}
+        """
+        if n1 % n2 == 0:
+            resultLbl["text"] += f"Remainder = {n1%n2}"
+
+def addition_Handler(event):
+    n1 = int(numTxt1.get())
+    n2 = int(numTxt2.get())
+    tmp = resultLbl["text"]
+    resultLbl["text"] += f"{n1} + {n2} = {n1 + n2}\n"
+
+def subtraction_Handler(event):
+    n1 = int(numTxt1.get())
+    n2 = int(numTxt2.get())
+    tmp = resultLbl["text"]
+    resultLbl["text"] += f"{n2} - {n2} = {n1 - n2}\n"
+
 window = tk.Tk(className = "calculator")
 
 number1Frame=tk.Frame()
