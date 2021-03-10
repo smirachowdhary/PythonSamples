@@ -62,15 +62,15 @@ multiplacation.bind("<Button-1>", multiplacation_Handler)
 multiplacation.pack(side = LEFT)
 
 addition = tk.Button(text="+", master = operatorsFrame)
-addition.bind("<Button-2>", addition_Handler)
+addition.bind("<Button-1>", addition_Handler)
 addition.pack(side = LEFT)
 
 division = tk.Button(text="/", master = operatorsFrame)
-division.bind("<Button-3>", division_Handler)
+division.bind("<Button-1>", division_Handler)
 division.pack(side = LEFT)
 
 subtraction = tk.Button(text="-", master = operatorsFrame)
-subtraction.bind("<Button-4>", subtraction_Handler)
+subtraction.bind("<Button-1>", subtraction_Handler)
 subtraction.pack(side = LEFT)
 
 operatorsFrame.pack()
