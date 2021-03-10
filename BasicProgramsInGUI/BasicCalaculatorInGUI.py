@@ -19,7 +19,7 @@ def division_Handler(event):
         Quotent = {n1 // n2}
         """
         if n1 % n2 == 0:
-            resultLbl["text"] += f"Remainder = {n1%n2}"
+            resultLbl["text"] += f"Remainder = {n1%n2}\n"
 
 def addition_Handler(event):
     n1 = int(numTxt1.get())
