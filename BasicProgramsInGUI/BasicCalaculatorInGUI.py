@@ -12,7 +12,7 @@ def division_Handler(event):
     n2 = int(numTxt2.get())
     tmp = resultLbl["text"]
     if n2 == 0:
-        resultLbl["text"] += "You cannot divide a number by 0."
+        resultLbl["text"] += "You cannot divide a number by 0.\n"
     else:
         resultLbl["text"] += f"""
         {n1} / {n2} = {n1 / n2:.3f}
