@@ -1,11 +1,27 @@
 from tkinter import *
 import tkinter as tk
 
-def multiplacation_Handler(event):
+def operation_Handler(operator):
     n1 = int(numTxt1.get())
     n2 = int(numTxt2.get())
     tmp = resultLbl["text"]
-    resultLbl["text"] += f"{n1} * {n2} = {n1 * n2}\n"
+    res = 0
+    if(operator == "+"):
+        res = n1 + n2
+    elif(operator == "-"):
+        res = n1 - n2
+    elif(operator == "*"):
+        res = n1 * n2
+    resultLbl["text"] += f"{n1} {operator} {n2} = {res}\n"
+
+def addition_Handler(event):
+    operation_Handler("+")  
+
+def subtraction_Handler(event):
+    operation_Handler("-") 
+
+def multiplacation_Handler(event):
+    operation_Handler("*") 
 
 def division_Handler(event):
     n1 = int(numTxt1.get())
@@ -21,17 +37,10 @@ def division_Handler(event):
         if n1 % n2 == 0:
             resultLbl["text"] += f"Remainder = {n1%n2}\n"
 
-def addition_Handler(event):
-    n1 = int(numTxt1.get())
-    n2 = int(numTxt2.get())
-    tmp = resultLbl["text"]
-    resultLbl["text"] += f"{n1} + {n2} = {n1 + n2}\n"
-
-def subtraction_Handler(event):
-    n1 = int(numTxt1.get())
-    n2 = int(numTxt2.get())
-    tmp = resultLbl["text"]
-    resultLbl["text"] += f"{n1} - {n2} = {n1 - n2}\n"
+def create_button(caption,handler):
+    btn = tk.Button(text=caption, master = operatorsFrame)
+    btn.bind("<Button-1>", handler)
+    btn.pack(side = LEFT)
 
 window = tk.Tk(className = "calculator")
 
@@ -57,21 +66,10 @@ number2Frame.pack()
 
 operatorsFrame = tk.Frame()
 
-multiplacation = tk.Button(text="*", master = operatorsFrame)
-multiplacation.bind("<Button-1>", multiplacation_Handler)
-multiplacation.pack(side = LEFT)
-
-addition = tk.Button(text="+", master = operatorsFrame)
-addition.bind("<Button-1>", addition_Handler)
-addition.pack(side = LEFT)
-
-division = tk.Button(text="/", master = operatorsFrame)
-division.bind("<Button-1>", division_Handler)
-division.pack(side = LEFT)
-
-subtraction = tk.Button(text="-", master = operatorsFrame)
-subtraction.bind("<Button-1>", subtraction_Handler)
-subtraction.pack(side = LEFT)
+create_button("*", multiplacation_Handler)
+create_button("/", division_Handler)
+create_button("+", addition_Handler)
+create_button("-", subtraction_Handler)
 
 operatorsFrame.pack()
 
