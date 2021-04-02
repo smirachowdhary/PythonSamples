@@ -1,6 +1,6 @@
 from tkinter import *
 import tkinter as tk
-import font
+from tkinter import font
 
 def operation_Handler(operator):
     n1 = int(numTxt1.get())
@@ -50,7 +50,7 @@ number1Frame=tk.Frame()
 numLbl1 = tk.Label(text = "Number 1:", master = number1Frame, fg = "#FF80FF", font = "Verdana 36")
 numLbl1.pack(side=LEFT,padx=5, pady=10, ipadx=20, ipady=10)
 
-numTxt1 = tk.Entry(bg="#FFFFFF", master = number1Frame, fg = "#FF80FF"), font = "Verdana 36"
+numTxt1 = tk.Entry(bg="#FFFFFF", master = number1Frame, fg = "#FF80FF", font = "Verdana 36")
 numTxt1.pack(side=LEFT,padx=5, pady=10, ipadx=20, ipady=10)
 
 number1Frame.pack()
@@ -76,7 +76,7 @@ operatorsFrame.pack()
 
 resultFrame = tk.Frame()
 
-resultTitleLbl = tk.Label(text = "Result", master = resultFrame)
+resultTitleLbl = tk.Label(text = "Result", master = resultFrame, font = "Verdana 36")
 resultTitleLbl.pack()
 
 resultLbl = tk.Label(master = resultFrame)
