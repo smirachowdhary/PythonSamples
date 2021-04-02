@@ -1,5 +1,6 @@
 from tkinter import *
 import tkinter as tk
+import font
 
 def operation_Handler(operator):
     n1 = int(numTxt1.get())
@@ -38,7 +39,7 @@ def division_Handler(event):
             resultLbl["text"] += f"Remainder = {n1%n2}\n"
 
 def create_button(caption,handler):
-    btn = tk.Button(text=caption, master = operatorsFrame, fg = "#FF80FF")
+    btn = tk.Button(text=caption, master = operatorsFrame, fg = "#FF80FF", font = "Verdana 36")
     btn.bind("<Button-1>", handler)
     btn.pack(side = LEFT,padx=5, pady=10, ipadx=20, ipady=10)
 
@@ -46,20 +47,20 @@ window = tk.Tk(className = "calculator")
 
 number1Frame=tk.Frame()
 
-numLbl1 = tk.Label(text = "Number 1:", master = number1Frame, fg = "#FF80FF")
+numLbl1 = tk.Label(text = "Number 1:", master = number1Frame, fg = "#FF80FF", font = "Verdana 36")
 numLbl1.pack(side=LEFT,padx=5, pady=10, ipadx=20, ipady=10)
 
-numTxt1 = tk.Entry(bg="#FFFFFF", master = number1Frame, fg = "#FF80FF")
+numTxt1 = tk.Entry(bg="#FFFFFF", master = number1Frame, fg = "#FF80FF"), font = "Verdana 36"
 numTxt1.pack(side=LEFT,padx=5, pady=10, ipadx=20, ipady=10)
 
 number1Frame.pack()
 
 number2Frame=tk.Frame()
 
-numLbl2 = tk.Label(text = "Number 2:", master = number2Frame, fg = "#FF80FF")
+numLbl2 = tk.Label(text = "Number 2:", master = number2Frame, fg = "#FF80FF", font = "Verdana 36")
 numLbl2.pack(side=LEFT,padx=5, pady=10, ipadx=20, ipady=10)
 
-numTxt2 = tk.Entry(bg="#FFFFFF", master = number2Frame, fg = "#FF80FF")
+numTxt2 = tk.Entry(bg="#FFFFFF", master = number2Frame, fg = "#FF80FF", font = "Verdana 36")
 numTxt2.pack(side=LEFT,padx=5, pady=10, ipadx=20, ipady=10)
 
 number2Frame.pack()
