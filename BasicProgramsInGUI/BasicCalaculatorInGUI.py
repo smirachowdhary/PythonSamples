@@ -38,29 +38,29 @@ def division_Handler(event):
             resultLbl["text"] += f"Remainder = {n1%n2}\n"
 
 def create_button(caption,handler):
-    btn = tk.Button(text=caption, master = operatorsFrame)
+    btn = tk.Button(text=caption, master = operatorsFrame, fg = "#FF80FF")
     btn.bind("<Button-1>", handler)
-    btn.pack(side = LEFT)
+    btn.pack(side = LEFT,padx=5, pady=10, ipadx=20, ipady=10)
 
 window = tk.Tk(className = "calculator")
 
 number1Frame=tk.Frame()
 
-numLbl1 = tk.Label(text = "Number 1:", master = number1Frame)
-numLbl1.pack(side=LEFT)
+numLbl1 = tk.Label(text = "Number 1:", master = number1Frame, fg = "#FF80FF")
+numLbl1.pack(side=LEFT,padx=5, pady=10, ipadx=20, ipady=10)
 
-numTxt1 = tk.Entry(fg="#000000",bg="#FFFFFF", master = number1Frame)
-numTxt1.pack(side=LEFT)
+numTxt1 = tk.Entry(fg="#000000",bg="#FFFFFF", master = number1Frame, fg = "#FF80FF")
+numTxt1.pack(side=LEFT,padx=5, pady=10, ipadx=20, ipady=10)
 
 number1Frame.pack()
 
 number2Frame=tk.Frame()
 
-numLbl2 = tk.Label(text = "Number 2:", master = number2Frame)
-numLbl2.pack(side=LEFT)
+numLbl2 = tk.Label(text = "Number 2:", master = number2Frame, fg = "#FF80FF")
+numLbl2.pack(side=LEFT,padx=5, pady=10, ipadx=20, ipady=10)
 
-numTxt2 = tk.Entry(fg="#000000",bg="#FFFFFF", master = number2Frame)
-numTxt2.pack(side=LEFT)
+numTxt2 = tk.Entry(fg="#000000",bg="#FFFFFF", master = number2Frame, fg = "#FF80FF")
+numTxt2.pack(side=LEFT,padx=5, pady=10, ipadx=20, ipady=10)
 
 number2Frame.pack()
 
