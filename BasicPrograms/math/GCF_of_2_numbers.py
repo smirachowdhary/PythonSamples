@@ -1,6 +1,6 @@
 n1 = int(input("Enter number here:"))
 n2 = int(input("Enter number here:"))
-GCD = ""
+GCF = ""
 smallest_number = ""
 biggest_number = ""
 
@@ -21,4 +21,4 @@ for i in range(smallest_number+1,0,-1):
             GCD = factor
             break
 
-print(f"GCD is equal to {GCD}")
+print(f"GCF is equal to {GCF}")
