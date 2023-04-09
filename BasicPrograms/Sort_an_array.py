@@ -30,8 +30,8 @@ def SearchIndex_in_Array(array,value):
     index = array.index(value)
     return index
 
-testcase = [4,5,88,77,3,6,9,10,88]
+testcase = [4,5,88,77,3,6,9,10,77]
 print(SortArray(testcase))
 
-testcase = [4,5,88,77,3,6,9,10,88]
-print(SearchIndex_in_Array(testcase, 77))
+testcase = [4,5,88,77,3,6,9,10,77]
+print(SearchIndex_in_Array(testcase, 3))
