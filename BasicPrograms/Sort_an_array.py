@@ -1,5 +1,3 @@
-# This code will return you a sorted array (which means the array will be organized in ascending  order).
-
 def SortArray(array):
     
     i=0
@@ -26,12 +24,30 @@ def SortArray(array):
     
     return array
 
-def SearchIndex_in_Array(array,value):
-    index = array.index(value)
+def FindAllIndexes(array,value):
+    index = []
+    i=0
+    while i<len(array):
+        if array[i]==value:
+            index.append[i]
     return index
+
+def SearchInArray(array,value):
+    present = ''
+    x = FindAllIndexes(array,value)
+
+    if x != []:
+        present = 'This element is present in this array.'
+    else:
+        present = 'This element is not present in this array.'
+    
+    return present
 
 testcase = [4,5,88,77,3,6,9,10,77]
 print(SortArray(testcase))
 
 testcase = [4,5,88,77,3,6,9,10,77]
-print(SearchIndex_in_Array(testcase, 3))
+print(FindAllIndexes(testcase, 77))
+
+testcase = [4,5,88,77,3,6,9,10,77]
+print(SearchInArray(testcase, 3))
